@@ -14,9 +14,7 @@
 </p>
 <div class="price">
 <%= number_to_currency(product.price) %>
-<!-- We want to use POST, so we’ll add a button this time; this means we’ll be using the button_to() method.button_to creates an HTML
-<form> -->
-<%= button_to 'Add to Cart', line_items_path(product_id: product) %>
+<%= button_to 'Add to Cart', line_items_path(product_id: product), remote: true %>
 </div>
 </li>
  <% end %>

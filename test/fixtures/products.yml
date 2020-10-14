@@ -11,7 +11,7 @@ two:
   price: 9.99
 
 
-two:
+ruby:
   title:      Programming Ruby 1.9
   description: MyText
   image_url: lorem.jpg
