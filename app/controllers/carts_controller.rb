@@ -1,4 +1,5 @@
 class CartsController < ApplicationController
+  #In application controller we said before_action:authorize so now we skip it for which authorization is not required. 
   skip_before_action :authorize, only: [:create, :update, :destroy]
   before_action :set_cart, only: [:show, :edit, :update, :destroy]
   rescue_from ActiveRecord::RecordNotFound, with: :invalid_cart
@@ -67,7 +68,6 @@ class CartsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_cart
       @cart = Cart.find(params[:id])
     end

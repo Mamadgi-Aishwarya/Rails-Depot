@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   end
     
   resources :users
-
+  resources :support_requests, only: [ :index, :update ]
   scope '(:locale)' do #:locale is in parentheses, which is the way to say that it’s optional.It is given for translation
   resources :orders
   resources :line_items
